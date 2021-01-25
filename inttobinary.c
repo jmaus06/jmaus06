@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-main(){
+int main(){
 
 int i;
 int bit,bits,bytevalue;
@@ -16,9 +16,11 @@ do{
 
 bits=bits+8;
 
-bytevalue =(pow(2,bits)-1)
+bytevalue =(pow(2,bits)-1);
 
 } while (i > bytevalue);
 
 printf("\nValue has been determined.\n");
+
+return 0;
 }
