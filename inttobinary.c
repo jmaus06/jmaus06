@@ -34,7 +34,7 @@ while (bits>=0){
 	}
 	bits = bits -1; /*go to next smallest bit*/
 }
-
+printf("\n");
 
 return 0;
 }
