@@ -5,34 +5,53 @@
 int main(){
 
 int i,current;
-int bit,bits,bytevalue;
+int bit,digit;
 
 printf("Enter integer: ");
 scanf("%d",&i);
 
-bits=0;
+bit=7;
 
-do{
+while (bit>=0){
 
-bits=bits+8;
-
-bytevalue =(pow(2,bits)-1);
-
-} while (i > bytevalue);
-
-bits=bits-1;
-while (bits>=0){
-
-	current = pow(2,bits);
-	/*printf("%d ",current);*/
+	current = pow(16,bit);
+	
 	if (current<=i){
-		i=i-current;
-		printf("1 ");
-	}
+		digit=i/current;
+		i=i%current;
+		if (digit<10)
+			printf("%d ",digit);
+		else {
+
+			switch (digit){
+
+			case 10:
+				printf("A ");
+				break;
+			case 11:
+				printf("B ");
+				break;
+			case 12:
+				printf("C ");
+				break;
+			case 13:
+				printf("D ");
+				break;
+			case 14:
+				printf("E ");
+				break;
+			case 15:
+				printf("F ");
+				break;
+			default:
+				break;
+			}
+		}
+}
 	else{
 		printf("0 ");
 	}
-	bits = bits -1; /*go to next smallest bit*/
+	bit = bit -1; /*go to next smallest bit*/
 }
 printf("\n");
 
