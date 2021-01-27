@@ -1,3 +1,4 @@
+/*Joel Maus*/
 /*converts integer to binary*/
 #include <stdio.h>
 #include <math.h>
@@ -14,11 +15,11 @@ bit=7;
 
 while (bit>=0){
 
-	current = pow(16,bit);
+	current = pow(16,bit);/*find value of highest bit position to test*/
 	
 	if (current<=i){
 		digit=i/current;
-		i=i%current;
+		i=i%current;/*use remainder for next calculation*/
 		if (digit<10)
 			printf("%d ",digit);
 		else {

@@ -1,3 +1,4 @@
+/*Joel Maus*/
 /*converts integer to binary*/
 #include <stdio.h>
 #include <math.h>
@@ -18,13 +19,13 @@ bits=bits+8;
 
 bytevalue =(pow(2,bits)-1);
 
-} while (i > bytevalue);
+} while (i > bytevalue);/*gets size of bits that the output should be*/
 
-bits=bits-1;
+bits=bits-1;/*start with the bit below the amount, which will be the highest*/
 while (bits>=0){
 
 	current = pow(2,bits);
-	/*printf("%d ",current);*/
+
 	if (current<=i){
 		i=i-current;
 		printf("1 ");

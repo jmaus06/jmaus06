@@ -1,3 +1,5 @@
+#Joel Maus
+#Makefile for binary conversion assignment
 make:
 	@echo "Targets are:"
 	@echo "binary"

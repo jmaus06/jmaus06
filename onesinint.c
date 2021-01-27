@@ -1,3 +1,4 @@
+/*Joel Maus*/
 /*finds number of 1's in a converted integer to binary*/
 #include <stdio.h>
 #include <math.h>
@@ -13,8 +14,8 @@ scanf("%d",&i);
 
 bits=0;
 total =0;
-do{
 
+do{
 bits=bits+8;
 
 bytevalue =(pow(2,bits)-1);
